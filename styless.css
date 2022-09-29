@@ -16,7 +16,7 @@ body {
     background-position: top center;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-color: #121214;
+    background-color: #0f0c15
 }
 /* O * serve para representar todo o conjunto presente no agrupamento selecionado, neste caso o BODY */
 body * {
@@ -67,6 +67,11 @@ main section:nth-child(2) { /* Animação da segunda sessão dentro do main */
 main section:nth-child(3) { /* Animação da terceira sessão dentro do main */
     animation-delay: .6s;
 }
+
+main section:nth-child(4) { /* Animação da terceira sessão dentro do main */
+    animation-delay: .8s;
+}
+
 
 /*Represente todo o conjunto no meio do código*/
 main {
