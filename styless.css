@@ -1,0 +1,163 @@
+/* Reset do CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Reset das Ul*/
+ul {
+    list-style: none;
+}
+
+/*Informações primárias de Fundo*/
+body {
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+/* O * serve para representar todo o conjunto presente no agrupamento selecionado, neste caso o BODY */
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+header {
+    margin-top: 32px; /*altura do topo*/
+    text-align: center; /*Alinhamento da imagem*/
+    height: 152px;
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+   
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%); /* Cor da borda*/
+    border-radius: 50%; /*Preenchimento da borda*/
+    display: flex; /*Centralização de cor da borda*/
+    padding: 4px; /* Total de borda aparecendo*/
+
+    transition: transform .3s; /* Complemento da Transição*/
+    animation: fromTop .7s .4s backwards;
+}
+
+header div:hover{ /*Transição quando mouse passa por cima*/
+    transform: scale(1.1);
+}
+
+header div img {
+    width: 100%; /*Valor representado sobre o width do "Header Div" */
+    border-radius: 50%;
+}
+
+main section{
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) { /* Animação da primeira sessão dentro do main */
+    animation-delay: 0;
+}
+
+main section:nth-child(2) { /* Animação da segunda sessão dentro do main */
+    animation-delay: .3s;
+}
+
+main section:nth-child(3) { /* Animação da terceira sessão dentro do main */
+    animation-delay: .6s;
+}
+
+/*Represente todo o conjunto no meio do código*/
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto; /*Primeiro valor representa tanto espaço de cima quanto de baixo, auto é para as laterais*/
+    display: grid;
+    gap: 24px;
+   /* margin-top: 32px; 
+    padding-bottom: 32px; Valores também utilizados para dar espaçamento no topo e no rodapé */
+}
+
+/*Representa as sessões listadas no HTML*/
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 12px;
+}
+
+/*Representa a Div criada dentro da section no HTML*/
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 10px;
+}
+
+/*Representa o H2 criado dentro da section no HTML*/
+section h2 {
+    letter-spacing: -0.47px;    
+}
+
+/*Representa o P criado dentro da section no HTML*/
+section p {
+    font-weight: 400;  
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+/*Representa toda UL criada dentro das section no HTML*/
+section ul {
+    display: flex; /*Função para tirar o "block" da "lista" e deixar uma ao lado da outra*/
+    flex-wrap: wrap; /*Função para que as propriedades se encaixem uma abaixo da outra quando não houver mais espaço na lateral*/
+    gap: 16px;
+    margin-top: 24px;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover{
+    transform: scale(1.1);
+}
+
+/* Representa Classe GAMES-LIST feita na UL dentro do HTML*/
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+/* Representa Classe CHANNEL-LIST feita na UL dentro do HTML*/
+.channel-list img {
+    border-radius: 50%;
+    width: 70px;
+    border: 1px solid #443e54;
+}
+
+/* animation */
+
+@keyframes fromTop{ /* Animação Cabeçalho */
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom { /* Animação Lateral */
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
